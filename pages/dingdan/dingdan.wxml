@@ -1,0 +1,48 @@
+<!--pages/dingdan/dingdan.wxml-->
+<cu-custom bgColor="bg-gradual-blue" isBack="{{true}}">
+	<view slot="backText">
+		<navigator url="../../pages/xiangqing/xiangqing">返回</navigator>
+	</view>
+	<view slot="content">确认订单</view>
+</cu-custom>
+<view class="order_address" bindtap="bindaddress">
+    <view class="select_address"><text class="iconfont icon-map_line-"></text>点击去选择地址</view>
+    <view><text class="iconfont icon-arrowright"></text></view>
+</view>
+<view class="Receiving_address" bindtap="bindaddress">
+    <view>
+        <view class="name_iphone">收货人:{{datare.name}}</view>
+        <view class="address">地址：{{datare.address}}</view>
+        <view class="name_iphone">手机号：{{datare.phone}}</view>
+    </view>
+    <view><text class="iconfont icon-arrowright"></text></view>
+</view>
+ 
+<view class="goods_msg">
+    <view class="goods_img"><image src="{{pro.photo_x}}" mode="widthFix"></image></view>
+    <view class="goods_content">共{{num}}件 <text class="iconfont icon-arrowright"></text></view>
+</view>
+ 
+<view class="msg_list">
+    <view class="msg_item">
+        <view>商品名称</view>
+        <view>{{pro.intro}}</view>
+    </view>
+    <view class="msg_item">
+        <view>配送费</view>
+        <view>包邮</view>
+    </view>
+    <view class="msg_item">
+        <view>商品价格</view>
+        <view style="">{{pro.price}}</view>
+    </view>
+    <view class="Total">
+       合计 <text class="Total_price">￥{{pro.price*num}}</text>
+    </view>
+</view>
+ 
+<view class="order_pay">
+    <view class="pay_money">付款 <text class="Total_price">￥{{pro.price*num}}</text></view>
+    <view class="submit_order" bindtap="bindSubmitOrder">提交订单</view>
+</view>
+

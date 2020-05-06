@@ -1,0 +1,62 @@
+<cu-custom bgColor="bg-gradual-blue">
+	<view slot="content">个人中心</view>
+</cu-custom>
+<!-- 背景图 -->
+<view class="padding-sm">
+	<view class="bg-gradual-blue padding radius text-center shadow-blur">
+		<view class="image-wei">
+		<!-- 头像 -->
+			<image src="../image/微信图片_20200424151111.jpg"></image>
+			<!-- 姓名 -->
+			<view>
+				Chafferer
+			</view>
+		</view>
+	</view>
+</view>
+<!-- 三图 -->
+<view class="dspl">
+	<view class="dspl-image">
+		<navigator url="../../pages/bangding/bangding">
+		<image src="../image/手机.png"></image>
+		<view>绑定手机</view>
+			</navigator>
+	</view>
+	<!--  -->
+	<view class="dspl-image">
+		<navigator url="../../pages/inte/inte">
+			<image src="../image/积分.png"></image>
+			<view>积分兑换</view>
+		</navigator>
+	</view>
+	<!--  -->
+	<view class="dspl-image">
+			<navigator url="">
+		<image src="../image/订单.png"></image>
+		<view>我的订单</view>
+			</navigator>
+	</view>
+</view>
+<!-- 三图 -->
+<view class="dspl">
+	<view class="dspl-image">
+		<navigator bindtap="lianxi"  url="">
+		<image src="/image/联系我们.png"></image>
+		<view>联系我们</view>
+			</navigator>
+	</view>
+	<!--  -->
+	<view class="dspl-image">
+		<navigator url="../../pages/ditu/ditu">
+			<image src="/image/导航 (1).png"></image>
+			<view>导航</view>
+		</navigator>
+	</view>
+	<!--  -->
+	<view class="dspl-image">
+			<navigator url="">
+		<image src="/image/通讯录.png"></image>
+		<view>通讯录</view>
+			</navigator>
+	</view>
+</view>

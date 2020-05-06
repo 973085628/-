@@ -1,0 +1,38 @@
+<!--pages/dizhi/dizhi.wxml-->
+<cu-custom bgColor="bg-gradual-blue" isBack="{{true}}">
+	<view slot="backText">
+		<navigator url="../pages/dingdan/dingdan">返回</navigator>
+	</view>
+	<view slot="content">地址列表</view>
+</cu-custom>
+<!-- 列表代码 -->
+<view wx:for="{{address}}" style='position: relative;'>
+  <!-- 列表层 -->
+  <view class='list' style='{{item.txtStyle}}' bindtouchstart="touchS" bindtouchmove="touchM" bindtouchend="touchE" data-index='{{index}}'>
+    <!-- 收货信息 -->
+    <view class='info' bindtap='select_addr' data-id="{{item.id}}">
+      <view>
+       <text bindtap="dian"  bind:change="delete1_name">{{item.name}}</text> 
+        <span class="phone" bind:change="delete1_photo">{{item.phone}}</span>
+        <span wx:if="{{item.is_default == 1}}" class='def'>默认</span>
+      </view>
+      <view bind:change="delete1_address">
+      <!-- {{item.province}} -->
+         {{item.address}}
+      </view>
+    </view>
+    <!-- 编辑图标 -->
+    <view  class='edit' bindtap='edit' data-id='{{item.id}}' data-name='{{item.name}}' data-phone='{{item.phone}}' data-address="{{item.address}}">
+      <image src='/image/编辑.png'></image>
+    </view>
+  </view>
+  <!-- 删除按钮 -->
+  <view class="delete" data-id="{{item.id}}" data-index='{{index}}' bindtap="delItem" >删除</view>
+</view>
+       <!-- 新增地址按钮 -->
+       <view class="btm">
+    <view class="padding flex flex-direction">
+			<button bindtap="xinzeng" class="cu-btn bg-blue margin-tb-sm lg">新增地址</button>
+		</view>
+    </view>
+       

@@ -1,0 +1,32 @@
+<cu-custom bgColor="bg-gradual-blue">
+	<view slot="content">卓盈助手</view>
+</cu-custom>
+<!-- 轮播 -->
+<swiper class="screen-swiper {{DotStyle?'square-dot':'round-dot'}}" indicator-dots="true" circular="true" autoplay="true" interval="5000" duration="500">
+  <swiper-item wx:for="{{swiperList}}" wx:key="index">
+    <image src="{{item.photo}}" mode="aspectFill"></image>
+    <video src="{{item.url}}" autoplay loop muted show-play-btn="{{false}}" controls="{{false}}" objectFit="cover" wx:if="{{item.type=='video'}}"></video>
+  </swiper-item>
+</swiper>
+<!-- 通告栏 -->
+<van-notice-bar left-icon="https://img.yzcdn.cn/1.png" text="我宁愿用尽此生，为那些尘世的硝烟尘雾，潸然泪下，为菩提落花，为世间繁华。" />
+<!-- 商品列表 -->
+<view class="commodity">
+	<view class="shangpin" wx:for="{{array}}" id="{{item.id}}" wx:key="key" bindtap='search'>
+		<!-- <navigator url = "/pages/details/details"> -->
+		<image src="{{item.photo_x}}"></image>
+		<!-- </navigator> -->
+		<view class="shenxian">
+			<text>{{item.name}}</text>
+		</view>
+		<view class="money">
+			<text class="Price">价格：{{item.price_yh}}</text>
+			<text class="money-top"> {{item.price}}</text>
+		</view>
+		<view class="tuijian">
+			<text class="money-to"> {{item.tui}}</text>
+			<text class="money-to"> 库存：{{item.shiyong}}</text>
+		</view>
+	</view>
+</view>
+<!-- 商品 -->

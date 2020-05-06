@@ -1,0 +1,16 @@
+.cu-item{
+  width: 25%;
+}
+.aar{
+ display: flex;
+ margin-top: 5rpx;
+ margin-left: 10rpx;
+}
+.imagesa image{
+ width: 150rpx;
+ height: 150rpx;
+}
+.name{
+  margin-top: 45rpx;
+  margin-left: 10rpx;
+}

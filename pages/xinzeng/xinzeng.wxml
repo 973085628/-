@@ -1,0 +1,43 @@
+<!--pages/xinzeng/xinzeng.wxml-->
+<cu-custom bgColor="bg-gradual-blue" isBack="{{true}}">
+	<view slot="backText">
+		<navigator url="../pages/dizhi/dizhi">返回</navigator>
+	</view>
+	<view slot="content">新增地址</view>
+</cu-custom>
+<!-- 新增 -->
+<view class="edit_address">
+<view class="address_msg">
+    <view class="item_msg">收货人</view>
+    <view class="section">
+        <input bind:change="delete1_name" placeholder="姓名" />
+    </view>
+</view>
+<view class="address_msg">
+    <view class="item_msg">联系电话</view>
+    <view class="section">
+        <input bind:change="delete1_photo" placeholder="手机或固话" />
+    </view>
+</view>
+<view class="cu-form-group">
+		 <view class="item_msga">地址选择</view>
+		<picker mode="region" bindchange="RegionChange" value="{{region}}" custom-item="{{customItem}}">
+			<view class="picker">
+				{{region[0]}}，{{region[1]}}，{{region[2]}}
+			</view>
+		</picker>
+	</view>
+<view class="address_msg">
+    <view class="item_msg">详细地址</view>
+    <view class="section">
+        <input bind:change="delete1_address" placeholder="请输入您的详细地址" />
+    </view>
+</view>
+<view class="address_msg">
+    <view class="item_msgg">设为默认收货地址</view>
+    <view class="sectionn">
+     <van-switch checked="{{ checked }}" bind:change="onChange" />
+    </view>
+</view>
+<view bindtap="baocun" class="keeps_address">保存地址</view>
+</view>

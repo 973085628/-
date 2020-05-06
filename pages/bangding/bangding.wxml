@@ -1,0 +1,10 @@
+<!--pages/bangding/bangding.wxml-->
+ <cu-custom bgColor="bg-gradual-blue" isBack="{{true}}">
+	<view slot="backText">
+		<navigator url="../../pages/index/index">返回</navigator>
+	</view>
+	<view slot="content">绑定手机</view>
+</cu-custom>
+<view class="buttont">
+<button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">获取手机号</button>
+</view>

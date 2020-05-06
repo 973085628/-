@@ -1,0 +1,86 @@
+<!--pages/xiangqing/xiangqing.wxml-->
+<cu-custom bgColor="bg-gradual-blue" isBack="{{true}}">
+	<view slot="backText">
+		<navigator url="../../pages/index/index">返回</navigator>
+	</view>
+	<view slot="content">商品详情</view>
+</cu-custom>
+<swiper class="screen-swiper {{DotStyle?'square-dot':'round-dot'}}" indicator-dots="true" circular="true" autoplay="true" interval="5000" duration="500">
+	<swiper-item wx:for="{{pro.img_arr}}" wx:key="index">
+		<image src="{{item}}" mode="aspectFill"></image>
+	</swiper-item>
+</swiper>
+<view class="name_view">
+	<text class="name">{{pro.intro}}</text>
+</view>
+<view class="money">
+	<view class="money_text">
+		<text class="detailsPrice">￥：{{pro.price_yh}}</text>
+		<text class="detailsShi">库存：{{pro.num}}</text>
+	</view>
+</view>
+<!-- 分页 -->
+<van-tabs>
+	<van-tab title="图文详情">
+		<view class="imager">
+			<view class="pro.photo">
+				<image src="{{pro.photo_d}}">
+				</image>
+				<image src="{{pro.photo_x}}">
+				</image>
+			</view>
+		</view>
+		<view style="height: 48px;"></view>
+	</van-tab>
+	<van-tab title="产品参数">
+		<!-- input框 -->
+		<view class="cu-form-group">
+			<view class="title">商品名称：</view>
+			<view bindinput="bininput">{{pro.intro}}</view>
+		</view>
+		<!-- input框 -->
+		<view class="cu-form-group">
+			<view class="title">商品编号：</view>
+			<view bindinput="bininput">{{pro.pro_number}}</view>
+		</view>
+		<!-- input框 -->
+		<view class="cu-form-group">
+			<view class="title">分类：</view>
+			<view>{{pro.cat_name}}</view>
+		</view>
+		<view style="height: 65px;"></view>
+	</van-tab>
+</van-tabs>
+<!-- 购买按钮 -->
+<view class="aaa">
+	<view bindtap="showModal" data-target="bottomModal" class="padding-xl radius shadow-blur bg-red margin-top bg-img arr" style="background-color:#0A95E7">
+		<view style="text-align: center;   margin-top: -8px;">立即购买</view>
+	</view>
+</view>
+<!-- 模态框 -->
+<view class="cu-modal bottom-modal {{modalName=='bottomModal'?'show':''}}">
+	<view class="cu-dialog">
+		<view class="cu-bar bg-white">
+			<view class="action text-green"></view>
+			<view class="action text-blue" bindtap="hideModal">取消</view>
+		</view>
+		<view class="padding-xl">
+			<!-- 内容 -->
+			<van-card num="" desc="库存：{{pro.num}}" price="{{pro.price_yh}}"  title="{{pro.intro}}" thumb="{{pro.photo_d}}" />
+		</view>
+		<view class="fls">
+		<view class="malf" style="margin-left: 10%;">
+		购买数量
+		</view>
+		<view class="val">
+		<van-stepper value="{{num*1}}" bind:change="onChange" />
+		</view>
+		</view>
+		<!-- 空高度 -->
+		<view class="gao">
+		</view>
+		<view  class="padding-xl radius shadow-blur bg-red margin-top bg-img arr" style="background-color:#0A95E7">
+		<view bindtap="goumai" style="text-align: center;margin-top: -8px;">立即购买</view>
+	</view>
+	</view>
+</view>

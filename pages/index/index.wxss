@@ -1,0 +1,37 @@
+/* 商品 */
+.commodity {
+  display: flex;
+  margin: 0 25rpx;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.shangpin {
+  width: 48%;
+  margin-top: 20rpx;
+  border: 1px solid lavender;
+}
+.shangpin image {
+  width: 100%;
+  height: 350rpx;
+}
+.shenxian {
+  display: flex;
+  justify-content: flex-start;
+  font-size: 25rpx;
+}
+.money {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40rpx;
+}
+.Price {
+  color: red
+}
+.money-top {
+  color: darkgrey
+}
+.tuijian {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20rpx;
+}

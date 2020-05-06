@@ -1,0 +1,15 @@
+/* pages/mine/mine.wxss */
+.win-image image{
+  width: 1000rpx;
+  height: 1120rpx;
+}
+.win-image{
+  text-align: center;
+}
+.ima image{
+  width: 220rpx;
+  height: 220rpx;
+  position: absolute;
+  margin-left: 265rpx;
+  margin-top: -360rpx;
+}

@@ -1,0 +1,7 @@
+<cu-custom bgColor="bg-gradual-blue" isBack="{{true}}">
+	<view slot="backText">
+		<navigator url="../../pages/My/My">返回</navigator>
+	</view>
+	<view slot="content">选择地图</view>
+</cu-custom>
+<input bindfocus="openMap" value='{{address}}' placeholder="点击选择详细地址"></input>

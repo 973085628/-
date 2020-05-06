@@ -1,0 +1,56 @@
+<!--pages/inte/inte.wxml-->
+<cu-custom bgColor="bg-gradual-blue" isBack="{{true}}">
+	<view slot="backText">
+		<navigator url="../../pages/My/My">返回</navigator>
+	</view>
+	<view slot="content">积分兑换</view>
+</cu-custom>
+<view class="integral"></view>
+<view class="jifen">
+<view class="aaa">
+ <view class="a">
+ 我的积分
+ <view>{{jifen}}</view>
+ </view>
+ <view class="b">
+ 待审核积分
+ <view>{{shenhe}}</view>
+ </view>
+ </view>
+  </view>
+  <!-- 信息 -->
+  <view class="cu-form-group">
+		<view class="title">姓名</view>
+		<input bindinput ="userNameInput" placeholder="请输入收款人姓名"></input>
+	</view>
+  <!--  -->
+    <view class="cu-form-group">
+		<view class="title">收款人电话</view>
+		<input bindinput ="userNameInputs" placeholder="请输入真实的收款人电话"></input>
+	</view>
+  <!--  -->
+      <view class="cu-form-group">
+		<view class="title">提现账号</view>
+		<input bindinput ="userNameInputse" placeholder="请输入银行卡账号"></input>
+	</view>
+  <!--  -->
+     <view class="cu-form-group">
+		<view class="title">提现金额</view>
+		<input bindinput ="userNameInputsr" placeholder="请输入提现的金额"></input>
+	</view>
+  <!--  -->
+      <view class="cu-form-group">
+		<view  class="title">实际到账</view>
+   	<input bindinput ="userNameInputsn" value="{{userNamesr * 0.9}}" placeholder="实际到账"></input>
+	</view>
+  <!--  -->
+  <!-- <view class="xinxi"  bindtap='search'>
+  </view> -->
+<!-- 手续费 -->
+<view class="shou">
+<text>注：提现每笔扣除10%手续费</text>
+</view>
+<!-- 按钮 -->
+<view class="aaaar">
+  <button style=" background-color: #0B97E3;color: white;" bindtap="loginBtnClick" class="cu-btn">提交申请</button>
+  </view>

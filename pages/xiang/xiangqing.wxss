@@ -1,0 +1,65 @@
+/* pages/xiangqing/xiangqing.wxss */
+.screen-swiper {
+  height: 750rpx;
+}
+.name_view{
+  padding: 40rpx;
+  background-color: white;
+  /* 并排 */
+  box-sizing: border-box; 
+  line-height: 25px;
+  display: flex;
+}
+.name {
+  font-size: 4vw;
+  /* 字体粗细 */
+  font-weight: bold;
+}
+.money{
+  width: 100%;
+  background-color: white;
+}
+.money_text{
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 5%;
+}
+
+.detailsPrice{
+  color: #dd2727;
+}
+.detailsShi{
+  color: #ccc;
+}
+.name_two{
+  font-weight: bold;
+  font-size: 3.5vw;
+  line-height: 20px;
+}
+
+.pro.photo image{
+width: 50%;
+}
+.aaa{
+  position: fixed;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  padding-bottom: 0px;
+}
+.fls{
+  display: flex;
+}
+.val{
+  margin-left: 30%;
+}
+.malf{
+  font-size: 16px;
+}
+.gao{
+  height: 30px;
+}
+.arr{
+  height: 30px;
+}

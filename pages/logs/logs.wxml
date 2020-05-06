@@ -1,0 +1,37 @@
+<cu-custom bgColor="bg-gradual-blue">
+	<view slot="content">我的团队</view>
+</cu-custom>
+<!-- 分页 -->
+<van-tabs bind:click="onClick">
+  <!-- 一级分页 -->
+  <van-tab title="一级">
+  <view class="aar" wx:for="{{yiji}}" wx:key="index">
+    <view class="imagesa">
+      <image src="{{item.photo}}" mode="aspectFill"></image>
+    </view>
+    <view class="name">
+    用户名：{{item.name}}
+    <view>
+    手机号：{{item.tel}}
+    </view>
+    </view>
+  </view>
+  </van-tab>
+  <van-tab title="二级">
+   <view class="aar" wx:for="{{erji}}" wx:key="index">
+   <view class="imagesa">
+      <image src="{{item.photo}}" mode="aspectFill"></image>
+    </view>
+    <view class="name">
+    用户名：{{item.name}}
+    <view>
+    手机号：{{item.tel}}
+    </view>
+    </view>
+   </view>
+  </van-tab>
+</van-tabs>
+<!-- 用户量 -->
+<view>
+<image src="image/用户管理（守）.png"></image>
+</view>

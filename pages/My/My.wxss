@@ -1,0 +1,22 @@
+/* pages/My/My.wxss */
+.image-wei image{
+ width: 80px;
+ height: 80px;
+ border-radius: 100px;
+}
+/* 图片/文字 */
+.dspl{
+  display: flex;
+  margin-top: 10px;
+}
+.dspl-image{
+  width: 33.3%;
+  text-align: center;
+}
+.dspl-image image{
+  width: 32px;
+  height: 32px;
+}
+.color-res{
+  color: black;
+}

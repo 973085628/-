@@ -1,0 +1,40 @@
+/* pages/inte/inte.wxss */
+/* pages/integral/integral.wxss */
+.integral{
+  background-color:#0B97E3;
+  width: 100%;
+  height: 300rpx;
+  text-align: center;
+}
+.jifen{
+ background-color:#F1F1F1;
+ height: 250rpx;
+  width: 90%;
+  margin-left: 5%;
+  margin-top: -150rpx;
+  padding-top: 50rpx;
+}
+.aaa{
+  display: flex;
+}
+.a{
+  width: 50%;
+  text-align: center;
+}
+.b{
+  width: 50%;
+  text-align: center;
+}
+.cu-form-group{
+  background-color: #F1F1F1;
+}
+.shou{
+  margin-left: 360rpx;
+}
+.aaaar{
+  text-align: center;
+  margin-top: 10rpx;
+}
+.title{
+  width: 180rpx;
+}
